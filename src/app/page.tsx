@@ -1,95 +1,76 @@
-import Image from "next/image";
+"use client";
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
+
+  const colorsPerTheme = React.useMemo(() => {
+    if (theme === "light") {
+      return {
+        background: "white",
+        color: "#111",
+      };
+    }
+    return {
+      background: "#222",
+      color: "white",
+    };
+  }, [theme]);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main
+      className={styles.main}
+      style={{
+        background: colorsPerTheme.background,
+        color: colorsPerTheme.color,
+      }}
+    >
+      <section className="container">
+        <div className="left-section">
+          PenguiN! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Expedita at accusantium vero doloremque assumenda nam placeat, commodi
+          neque facere cupiditate quisquam repellendus quidem ea? Fugiat
+          doloremque repudiandae odio accusamus nemo. Lorem ipsum, dolor sit
+          amet consectetur adipisicing elit. Expedita at accusantium vero
+          doloremque assumenda nam placeat, commodi neque facere cupiditate
+          quisquam repellendus quidem ea? Fugiat doloremque repudiandae odio
+          accusamus nemo. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Expedita at accusantium vero doloremque assumenda nam placeat,
+          commodi neque facere cupiditate quisquam repellendus quidem ea? Fugiat
+          doloremque repudiandae odio accusamus nemo. Lorem ipsum, dolor sit
+          amet consectetur adipisicing elit. Expedita at accusantium vero
+          doloremque assumenda nam placeat, commodi neque facere cupiditate
+          quisquam repellendus quidem ea? Fugiat doloremque repudiandae odio
+          accusamus nemo. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Expedita at accusantium vero doloremque assumenda nam placeat,
+          commodi neque facere cupiditate quisquam repellendus quidem ea? Fugiat
+          doloremque repudiandae odio accusamus nemo. Lorem ipsum, dolor sit
+          amet consectetur adipisicing elit. Expedita at accusantium vero
+          doloremque assumenda nam placeat, commodi neque facere cupiditate
+          quisquam repellendus quidem ea? Fugiat doloremque repudiandae odio
+          accusamus nemo. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Expedita at accusantium vero doloremque assumenda nam placeat,
+          commodi neque facere cupiditate quisquam repellendus quidem ea? Fugiat
+          doloremque repudiandae odio accusamus nemo. Lorem ipsum, dolor sit
+          amet consectetur adipisicing elit. Expedita at accusantium vero
+          doloremque assumenda nam placeat, commodi neque facere cupiditate
+          quisquam repellendus quidem ea? Fugiat doloremque repudiandae odio
+          accusamus nemo. Lorem ipsum, dolor sit amet consectetur adipisicing
+          elit. Expedita at accusantium vero doloremque assumenda nam placeat,
+          commodi neque facere cupiditate quisquam repellendus quidem ea? Fugiat
+          doloremque repudiandae odio accusamus nemo.
         </div>
-      </div>
+      <div className="right-section">
+          bla!
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        </div>
+        {/* <div style={{flex: 1}}>
+invisible?
+  
+`        </div> */}
+      </section>
     </main>
   );
 }
