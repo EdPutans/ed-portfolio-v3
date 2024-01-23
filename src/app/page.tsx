@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Myself from "./Components/MySelf";
+import MyStuff from "./Components/MyStuff";
 // import './global.css';
 
 export default function Home() {
@@ -32,8 +33,19 @@ export default function Home() {
     >
       <section className="container">
         <div className="left-section">
-          {/* TODO: remove the 2000px hardcoded width */}
-          {/* <MyStuff /> */}
+          <button
+            onClick={() => {
+              setTheme((prevTheme) => {
+                if (prevTheme === "light") {
+                  return "dark";
+                }
+                return "light";
+              });
+            }}
+          >
+            {theme === "light" ? "Dark" : "Light"} change!
+          </button>
+          <MyStuff />
         </div>
         <div className="right-section">
           <Myself />

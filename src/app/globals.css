@@ -20,10 +20,7 @@ body {
   box-sizing: border-box;
 }
 
-
-
 .container {
-  /* max-width: 800px; */
   display: flex;
   margin: auto;
   gap: var(--pad);
@@ -32,21 +29,19 @@ body {
 
 .left-section {
   flex: 1;
-  height: 2000px;
+  min-height: 10000px;
   padding: var(--pad);
 }
 
 .right-section {
   position: sticky;
   width: 50%;
-  background-color: pink;
   top: 0;
   padding: var(--pad);
-  /* max-height: calc(100vw - 32px); */
   max-height: calc(100vw - 40px);
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 920px) {
   .right-section {
     display: none;
   }

@@ -1,0 +1,29 @@
+.about-me-section {
+  padding: 16px 0;
+  display: flex;
+}
+
+.about-me-section_image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.about-me-section_text {
+  line-height: 1.8;
+  font-size: 3rem;
+}
+
+.about-me-section_text_sub {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  /* letter-spacing: 3px; */
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.about-me-section_text_description {
+  color: #b9b9b9;
+  line-height: 1.2rem;
+}
