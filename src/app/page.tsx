@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "./page.module.css";
+import Myself from "./Components/MySelf";
+// import './global.css';
 
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -10,66 +11,34 @@ export default function Home() {
     if (theme === "light") {
       return {
         background: "white",
-        color: "#111",
+        color: "#151515",
       };
     }
     return {
-      background: "#222",
+      background: "#151515",
       color: "white",
     };
   }, [theme]);
 
   return (
     <main
-      className={styles.main}
+
       style={{
+        maxWidth: 1200,
+        margin: "0 auto",
         background: colorsPerTheme.background,
         color: colorsPerTheme.color,
       }}
     >
       <section className="container">
         <div className="left-section">
-          PenguiN! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Expedita at accusantium vero doloremque assumenda nam placeat, commodi
-          neque facere cupiditate quisquam repellendus quidem ea? Fugiat
-          doloremque repudiandae odio accusamus nemo. Lorem ipsum, dolor sit
-          amet consectetur adipisicing elit. Expedita at accusantium vero
-          doloremque assumenda nam placeat, commodi neque facere cupiditate
-          quisquam repellendus quidem ea? Fugiat doloremque repudiandae odio
-          accusamus nemo. Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Expedita at accusantium vero doloremque assumenda nam placeat,
-          commodi neque facere cupiditate quisquam repellendus quidem ea? Fugiat
-          doloremque repudiandae odio accusamus nemo. Lorem ipsum, dolor sit
-          amet consectetur adipisicing elit. Expedita at accusantium vero
-          doloremque assumenda nam placeat, commodi neque facere cupiditate
-          quisquam repellendus quidem ea? Fugiat doloremque repudiandae odio
-          accusamus nemo. Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Expedita at accusantium vero doloremque assumenda nam placeat,
-          commodi neque facere cupiditate quisquam repellendus quidem ea? Fugiat
-          doloremque repudiandae odio accusamus nemo. Lorem ipsum, dolor sit
-          amet consectetur adipisicing elit. Expedita at accusantium vero
-          doloremque assumenda nam placeat, commodi neque facere cupiditate
-          quisquam repellendus quidem ea? Fugiat doloremque repudiandae odio
-          accusamus nemo. Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Expedita at accusantium vero doloremque assumenda nam placeat,
-          commodi neque facere cupiditate quisquam repellendus quidem ea? Fugiat
-          doloremque repudiandae odio accusamus nemo. Lorem ipsum, dolor sit
-          amet consectetur adipisicing elit. Expedita at accusantium vero
-          doloremque assumenda nam placeat, commodi neque facere cupiditate
-          quisquam repellendus quidem ea? Fugiat doloremque repudiandae odio
-          accusamus nemo. Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Expedita at accusantium vero doloremque assumenda nam placeat,
-          commodi neque facere cupiditate quisquam repellendus quidem ea? Fugiat
-          doloremque repudiandae odio accusamus nemo.
+          {/* TODO: remove the 2000px hardcoded width */}
+          {/* <MyStuff /> */}
         </div>
-      <div className="right-section">
-          bla!
+        <div className="right-section">
+          <Myself />
 
         </div>
-        {/* <div style={{flex: 1}}>
-invisible?
-  
-`        </div> */}
       </section>
     </main>
   );
