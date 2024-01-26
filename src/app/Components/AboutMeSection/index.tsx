@@ -10,6 +10,7 @@ const AboutMeSection = (props: Props) => {
         <div style={{ display: "FLEX", flexDirection: "column" }}>
           <h1 className="about-me-section_text">Ed Perkele</h1>
           <h2 className="about-me-section_text_sub">Fullstack engineer</h2>
+          <h3>daddy here</h3>
           <p className="about-me-section_text_description">
             Developer. Teacher. Absolute cunt. Your mom would not approve me
             sleeping over.

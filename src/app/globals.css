@@ -3,45 +3,36 @@ html {
   display: flex;
 }
 
-/* :root {
-  --dark-grey: rgb(36, 35, 31);
-  --large: rgb(235, 23, 97);
-  --medium: rgb(146, 200, 49);
-  --blue: rgb(116, 198, 204);
-  --text: rgb(152, 152, 152);
-  --white: rgb(255, 255, 255);
-} */
-
-
 :root {
   --pad: 16px;
   --dark-grey: rgb(36, 35, 31);
   --large: rgb(235, 23, 97);
   --medium: rgb(146, 200, 49);
   --blue: rgb(116, 198, 204);
-  --text: rgb(152, 152, 152);
+  --text: rgb(185, 185, 185);
   --white: rgb(255, 255, 255);
 }
 
 /* light mode: */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --dark-grey: rgb(255, 255, 255);
-    --large: rgb(235, 23, 97);
-    --medium: rgb(146, 200, 49);
-    --blue: rgb(116, 198, 204);
-    --text: rgb(152, 152, 152);
+    --large: rgb(138, 69, 160);
+    --medium: rgb(208, 97, 143);
+    --blue: rgb(226, 34, 65);
+    --text: rgb(36, 35, 31);
     --white: rgb(36, 35, 31);
   }
-}
+} */
 
 .light-mode {
   --dark-grey: rgb(255, 255, 255);
-  --large: rgb(235, 23, 97);
-  --medium: rgb(146, 200, 49);
-  --blue: rgb(116, 198, 204);
-  --text: rgb(152, 152, 152);
-  --white: rgb(36, 35, 31);
+  --large: rgb(138, 69, 160);
+  --medium: rgb(208, 97, 143);
+  --blue: rgb(226, 34, 65);
+  /* --text: rgb(185, 185, 185); */
+  --text: rgb(32, 32, 32);
+  --white: rgb(32, 32, 32);
 }
 
 h1 {
@@ -69,14 +60,17 @@ p {
   font-size: 1rem;
   font-weight: 400;
   color: var(--text);
-
 }
 
 body {
   width: 100%;
   margin: auto;
   background-color: var(--dark-grey);
-  transition: background-color 200ms linear;
+  transition: background-color 100ms linear;
+}
+
+p h1 h2 h3 {
+  transition: color 100ms linear;
 }
 
 
