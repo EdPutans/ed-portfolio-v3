@@ -1,15 +1,16 @@
+import { Project } from "next/dist/build/swc";
+import "./index.css";
 
-import './index.css'
-
-type Props = {}
+type Project = {
+  title: string;
+  description: string;
+  liveurl: string;
+  githuburl: string;
+  playstore: string;
+};
 
 const MyStuff = (props: Props) => {
-  return (
-    <div>
+  return <div></div>;
+};
 
-
-    </div>
-  )
-}
-
-export default MyStuff
+export default MyStuff;

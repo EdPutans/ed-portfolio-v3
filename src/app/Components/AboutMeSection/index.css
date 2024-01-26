@@ -11,19 +11,24 @@
 }
 
 .about-me-section_text {
-  line-height: 1.8;
+  font-family: monospace;
+  margin-top: 10px;
+  margin-left: -5px;
   font-size: 3rem;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+  font-weight: 200;
 }
 
 .about-me-section_text_sub {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  /* letter-spacing: 3px; */
-  font-weight: 400;
+  font-family: monospace;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 
 .about-me-section_text_description {
   color: #b9b9b9;
-  line-height: 1.2rem;
+  /* line-height: 1.2rem; */
 }

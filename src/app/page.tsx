@@ -1,57 +1,35 @@
 "use client";
 
-import React, { useState } from "react";
+import { DarkModeButton } from "@/app/Components/DarkModeButton";
+import { Inter } from "next/font/google";
 import Myself from "./Components/MySelf";
 import MyStuff from "./Components/MyStuff";
-// import './global.css';
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
-
-  const colorsPerTheme = React.useMemo(() => {
-    if (theme === "light") {
-      return {
-        background: "white",
-        color: "#151515",
-      };
-    }
-    return {
-      background: "#151515",
-      color: "white",
-    };
-  }, [theme]);
-
   return (
-    <main
-
-      style={{
-        maxWidth: 1200,
-        margin: "0 auto",
-        background: colorsPerTheme.background,
-        color: colorsPerTheme.color,
-      }}
-    >
-      <section className="container">
-        <div className="left-section">
-          <button
-            onClick={() => {
-              setTheme((prevTheme) => {
-                if (prevTheme === "light") {
-                  return "dark";
-                }
-                return "light";
-              });
-            }}
-          >
-            {theme === "light" ? "Dark" : "Light"} change!
-          </button>
-          <MyStuff />
-        </div>
-        <div className="right-section">
-          <Myself />
-
-        </div>
-      </section>
-    </main>
+    <html lang="en">
+      <body className={inter.className}>
+        <main
+          style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+          }}
+        >
+          <section className="container">
+            <div style={{ top: 10, right: 20, position: "fixed", zIndex: 999 }}>
+              <DarkModeButton />
+            </div>
+            <section className="left-section">
+              <MyStuff />
+            </section>
+            <aside className="right-section">
+              <Myself />
+            </aside>
+          </section>
+        </main>
+      </body>
+    </html>
   );
 }
