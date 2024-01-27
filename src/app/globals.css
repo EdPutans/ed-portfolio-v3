@@ -8,7 +8,7 @@ html {
   --dark-grey: rgb(36, 35, 31);
   --large: rgb(235, 23, 97);
   --medium: rgb(146, 200, 49);
-  --blue: rgb(116, 198, 204);
+  --small: rgb(116, 198, 204);
   --text: rgb(185, 185, 185);
   --white: rgb(255, 255, 255);
 }
@@ -17,7 +17,7 @@ html {
   --dark-grey: rgb(255, 255, 255);
   --large: rgb(72, 75, 106);
   --medium: rgb(99, 102, 125);
-  --blue: rgb(147, 148, 165);
+  --small: rgb(147, 148, 165);
   --text: rgb(147, 148, 165);
   --white: rgb(32, 32, 32);
 }
@@ -54,14 +54,22 @@ body {
   transition: background-color 100ms linear;
 }
 
-p h1 h2 h3 {
-  font-family: monospace;
+@font-face {
+  font-family: "Consolas";
+  src: url('../../public/CONSOLA.TTF');
+}
+
+p,
+h1,
+h2,
+h3 {
+  font-family: "Consolas";
   transition: color 100ms linear;
 }
 
 
 * {
-  margin: 0;
+  margin: 01;
   padding: 0;
   box-sizing: border-box;
 }
@@ -77,14 +85,27 @@ p h1 h2 h3 {
   flex: 1;
   min-height: 10000px;
   padding: var(--pad);
+  max-width: 50%;
 }
 
 .right-section {
-  position: sticky;
+  position: fixed;
   width: 50%;
   top: 0;
+  left: 50%;
   padding: var(--pad);
-  max-height: calc(100vw - 40px);
+  max-height: calc(100vh - 32px);
+
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--small);
+  transition: color 200ms linear;
 }
 
 .separator {

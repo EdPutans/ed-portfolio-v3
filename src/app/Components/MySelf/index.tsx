@@ -3,7 +3,7 @@ import "./index.css";
 
 type Props = {};
 
-const Separator = () => {
+export const Separator = () => {
   return <div className="separator" />;
 };
 
@@ -11,7 +11,7 @@ const Myself = (props: Props) => {
   return (
     <div>
       <AboutMeSection />
-      <Separator />
+      {/* <Separator /> */}
     </div>
   );
 };

@@ -28,8 +28,8 @@ export default function Home() {
       <body className={inter.className}>
         <main
           style={{
-            maxWidth: 1200,
-            margin: "0 auto",
+            maxWidth: 1560,
+            margin: "16px auto",
           }}
         >
           <section className="container">
